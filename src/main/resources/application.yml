@@ -1,0 +1,17 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:rhtld123/server-config.git
+          search-paths: /**
+          default-label: master
+          ignoreLocalSshSettings: true
+          strictHostKeyChecking: false
+          hostKey: hostkey # hostKey? base64 ???? ?
+          hostKeyAlgorithm: ssh-rsa # ???? ?? ????
+          privateKey: |
